@@ -2,9 +2,7 @@
 
 Real-time EEG visualization dashboard for the [Muse 2](https://choosemuse.com/) headband. Streams raw brainwaves, power spectral density, frequency band powers, and signal quality to a browser-based UI over WebSocket.
 
-![Stack](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
-![BrainFlow](https://img.shields.io/badge/BrainFlow-5.x-blue)
-![Plotly](https://img.shields.io/badge/Plotly.js-3F4F75?style=flat&logo=plotly&logoColor=white)
+**FastAPI + BrainFlow + Plotly.js** — no build step, single-page dark-themed UI.
 
 ## Features
 
