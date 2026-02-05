@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse 2 EEG Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.plot.ly/plotly-basic-2.35.2.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Muse 2 EEG Dashboard</h1>
+        <div class="header-right">
+            <span id="mode-badge" class="badge badge-synthetic">Connecting...</span>
+            <span id="connection-status" class="status-dot disconnected" title="WebSocket status"></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="signal-quality-bar">
+            <h2>Signal Quality</h2>
+            <div class="quality-indicators" id="quality-indicators">
+                <div class="quality-item">
+                    <span class="quality-dot" id="quality-TP9"></span>
+                    <span class="quality-label">TP9</span>
+                </div>
+                <div class="quality-item">
+                    <span class="quality-dot" id="quality-AF7"></span>
+                    <span class="quality-label">AF7</span>
+                </div>
+                <div class="quality-item">
+                    <span class="quality-dot" id="quality-AF8"></span>
+                    <span class="quality-label">AF8</span>
+                </div>
+                <div class="quality-item">
+                    <span class="quality-dot" id="quality-TP10"></span>
+                    <span class="quality-label">TP10</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-row raw-section">
+            <div id="raw-chart" class="chart-container"></div>
+        </section>
+
+        <section class="chart-row bottom-section">
+            <div id="fft-chart" class="chart-container"></div>
+            <div id="band-chart" class="chart-container"></div>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
